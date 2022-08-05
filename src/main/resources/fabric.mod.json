@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "alchemicaldrugs",
+  "version": "${version}",
+
+  "name": "Example Mod",
+  "description": "Addon for Alchemistry that adds substances and the ability to synthesize them.",
+  "authors": [
+    "TechnoVision"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/alchemical-drugs",
+    "sources": "https://github.com/TechnoVisionDev/Alchemical-Drugs"
+  },
+
+  "license": "ARR",
+  "icon": "assets/alchemicaldrugs/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.technovision.alchemicaldrugs.AlchemicalDrugs"
+    ]
+  },
+  "mixins": [
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17",
+    "alchemistry": ">=1.0.0",
+    "chemlib": ">=1.0.0"
+  }
+}
