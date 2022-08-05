@@ -3,8 +3,8 @@
   "id": "alchemicaldrugs",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "Addon for Alchemistry that adds substances and the ability to synthesize them.",
+  "name": "Alchemical Drugs",
+  "description": "Addon for Alchemistry that adds illicit substances and the ability to synthesize them.",
   "authors": [
     "TechnoVision"
   ],
@@ -13,13 +13,16 @@
     "sources": "https://github.com/TechnoVisionDev/Alchemical-Drugs"
   },
 
-  "license": "ARR",
+  "license": "MIT",
   "icon": "assets/alchemicaldrugs/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
       "com.technovision.alchemicaldrugs.AlchemicalDrugs"
+    ],
+    "client": [
+      "com.technovision.alchemicaldrugs.AlchemicalDrugsClient"
     ]
   },
   "mixins": [

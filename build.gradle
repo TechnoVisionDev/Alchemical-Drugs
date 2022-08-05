@@ -19,6 +19,14 @@ repositories {
 		name = 'Curse Maven'
 		url = 'https://cursemaven.com'
 	}
+	maven {
+		name = 'Ladysnake Mods'
+		url = 'https://ladysnake.jfrog.io/artifactory/mods'
+		content {
+			includeGroup 'io.github.ladysnake'
+			includeGroupByRegex 'io\\.github\\.onyxstudios.*'
+		}
+	}
 }
 
 dependencies {
@@ -54,6 +62,11 @@ dependencies {
 
 	// Alchemistry
 	modImplementation "com.github.SmashingMods:Alchemistry-Fabric:1.19.1-1.0.0"
+
+	// Satin API
+	modImplementation "io.github.ladysnake:satin:1.9.0"
+	// Include Satin as a Jar-in-Jar dependency (optional)
+	include "io.github.ladysnake:satin:1.9.0"
 }
 
 processResources {

@@ -8,7 +8,12 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+
 public abstract class AbstractFoodItem extends ItemWithTooltip {
+
+    protected static final ScheduledExecutorService executor = Executors.newScheduledThreadPool(2);
 
     public AbstractFoodItem(String chemicalFormula) {
         super(chemicalFormula);
