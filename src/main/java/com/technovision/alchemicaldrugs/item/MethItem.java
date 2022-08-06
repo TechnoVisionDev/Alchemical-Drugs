@@ -22,8 +22,8 @@ public class MethItem extends AbstractFoodItem {
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         if (!world.isClient()) {
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 30 * 20, 1));
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 30 * 20, 1));
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 30 * 20, 1));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 30 * 20, 0));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 30 * 20, 0));
         } else {
             String key = getName().getString();
             if (isMethEffectEnabled) { cancelThreads(key); }

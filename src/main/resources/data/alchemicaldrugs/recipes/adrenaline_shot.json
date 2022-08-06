@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "chemlib:epinephrine"
+    },
+    {
+      "item": "alchemicaldrugs:syringe"
+    }
+  ],
+  "result": {
+    "item": "alchemicaldrugs:adrenaline_shot",
+    "count": 1
+  }
+}

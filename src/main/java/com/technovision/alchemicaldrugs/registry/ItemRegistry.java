@@ -16,6 +16,8 @@ public class ItemRegistry {
     public static AcidTabItem ACID_TAB = new AcidTabItem();
     public static PsilocybinItem PSILOCYBIN = new PsilocybinItem();
     public static Item SYRINGE = new Item(ITEM_SETTINGS);
+    public static AdrenalineItem ADRENALINE_SHOT = new AdrenalineItem();
+    public static CaffeineItem CAFFEINE_SHOT = new CaffeineItem();
 
     public static void registerItems() {
         Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "cocaine"), COCAINE);
@@ -24,5 +26,7 @@ public class ItemRegistry {
         Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "psilocybin"), PSILOCYBIN);
         Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "acid_tab"), ACID_TAB);
         Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "syringe"), SYRINGE);
+        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "adrenaline_shot"), ADRENALINE_SHOT);
+        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "caffeine_shot"), CAFFEINE_SHOT);
     }
 }

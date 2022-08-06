@@ -20,6 +20,7 @@ public class CocaineItem extends AbstractFoodItem {
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         if (!world.isClient()) {
+            user.getStackInHand(user.getActiveHand()).decrement(1);
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 30 * 20, 2));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 30 * 20, 1));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 30 * 20, 1));
