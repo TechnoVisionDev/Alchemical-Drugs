@@ -4,6 +4,7 @@ import com.technovision.alchemicaldrugs.api.item.AbstractFoodItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
@@ -21,6 +22,7 @@ public class MethItem extends AbstractFoodItem {
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         if (!world.isClient()) {
+            if (!((PlayerEntity) user).isCreative()) user.getStackInHand(user.getActiveHand()).decrement(1);
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 30 * 20, 1));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 30 * 20, 0));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 30 * 20, 0));

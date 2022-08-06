@@ -1,0 +1,10 @@
+{
+  "type": "alchemistry:compactor",
+  "group": "compactor",
+  "input": {
+    "item": "chemlib:acetylsalicylic_acid"
+  },
+  "result": {
+    "item": "alchemicaldrugs:aspirin"
+  }
+}

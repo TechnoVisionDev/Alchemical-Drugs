@@ -5,6 +5,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
@@ -19,7 +20,7 @@ public class AdrenalineItem extends AbstractFoodItem {
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         if (!world.isClient()) {
             user.damage(DamageSource.STARVE, 1);
-            user.getStackInHand(user.getActiveHand()).decrement(1);
+            if (!((PlayerEntity) user).isCreative()) user.getStackInHand(user.getActiveHand()).decrement(1);
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20 * 20, 0));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 20 * 20, 0));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 20 * 20, 0));

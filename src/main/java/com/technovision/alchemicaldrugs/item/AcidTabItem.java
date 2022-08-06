@@ -4,6 +4,7 @@ import com.technovision.alchemicaldrugs.api.item.AbstractFoodItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
@@ -34,7 +35,7 @@ public class AcidTabItem extends AbstractFoodItem {
             }, 1, TimeUnit.MINUTES);
             setThreads(key, audioThread, cancelThread);
         } else {
-            user.getStackInHand(user.getActiveHand()).decrement(1);
+            if (!((PlayerEntity) user).isCreative()) user.getStackInHand(user.getActiveHand()).decrement(1);
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 60 * 20, 0));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 60 * 20, 0));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 60 * 20, 0));
