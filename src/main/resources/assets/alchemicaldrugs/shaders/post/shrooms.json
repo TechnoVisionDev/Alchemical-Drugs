@@ -15,7 +15,7 @@
       "outtarget": "minecraft:main"
     },
     {
-      "name": "alchemicaldrugs:wobble",
+      "name": "alchemicaldrugs:shrooms",
       "intarget": "minecraft:main",
       "outtarget": "swap"
     },

@@ -15,13 +15,15 @@ public class AlchemicalDrugsClient implements ClientModInitializer {
     public static final Map<String, ScheduledFuture<?>> AUDIO_THREADS = new HashMap<>();
     public static final Map<String, ScheduledFuture<?>> CANCEL_THREADS = new HashMap<>();
 
-    private static final ManagedShaderEffect LSD_SHADER = ShaderEffectManager.getInstance().manage(new Identifier(AlchemicalDrugs.MOD_ID, "shaders/post/trip.json"));
+    private static final ManagedShaderEffect LSD_SHADER = ShaderEffectManager.getInstance().manage(new Identifier(AlchemicalDrugs.MOD_ID, "shaders/post/lsd.json"));
     private static final ManagedShaderEffect COCAINE_SHADER = ShaderEffectManager.getInstance().manage(new Identifier("shaders/post/phosphor.json"));
     private static final ManagedShaderEffect METH_SHADER = ShaderEffectManager.getInstance().manage(new Identifier("shaders/post/bumpy.json"));
+    private static final ManagedShaderEffect SHROOMS_SHADER = ShaderEffectManager.getInstance().manage(new Identifier(AlchemicalDrugs.MOD_ID, "shaders/post/shrooms.json"));
 
     public static boolean isLSDEffectEnabled = false;
     public static boolean isCocaineEffectEnabled = false;
     public static boolean isMethEffectEnabled = false;
+    public static boolean isShroomsEffectEnabled = false;
 
     @Override
     public void onInitializeClient() {
@@ -34,6 +36,9 @@ public class AlchemicalDrugsClient implements ClientModInitializer {
             }
             if (isMethEffectEnabled) {
                 METH_SHADER.render(tickDelta);
+            }
+            if (isShroomsEffectEnabled) {
+                SHROOMS_SHADER.render(tickDelta);
             }
         });
     }

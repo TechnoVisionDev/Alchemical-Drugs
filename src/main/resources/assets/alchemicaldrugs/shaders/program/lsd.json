@@ -5,7 +5,7 @@
         "dstrgb": "zero"
     },
     "vertex": "sobel",
-    "fragment": "alchemicaldrugs:wobble",
+    "fragment": "alchemicaldrugs:lsd",
     "attributes": [ "Position" ],
     "samplers": [
         { "name": "DiffuseSampler" }

@@ -6,6 +6,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
 import java.util.concurrent.ScheduledFuture;
@@ -13,10 +14,10 @@ import java.util.concurrent.TimeUnit;
 
 import static com.technovision.alchemicaldrugs.AlchemicalDrugsClient.*;
 
-public class AcidTabItem extends AbstractFoodItem {
+public class AcidItem extends AbstractFoodItem {
 
-    public AcidTabItem() {
-        super(null);
+    public AcidItem() {
+        super("C₂₀H₂₅N₃O");
     }
 
     @Override
@@ -39,5 +40,10 @@ public class AcidTabItem extends AbstractFoodItem {
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 60 * 20, 0));
         }
         return stack;
+    }
+
+    @Override
+    public UseAction getUseAction(ItemStack stack) {
+        return UseAction.DRINK;
     }
 }

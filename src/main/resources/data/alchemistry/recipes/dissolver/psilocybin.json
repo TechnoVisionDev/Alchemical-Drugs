@@ -1,0 +1,34 @@
+{
+  "type": "alchemistry:dissolver",
+  "group": "alchemistry:dissolver",
+  "input": {
+    "item": "alchemicaldrugs:psilocybin"
+  },
+  "output": {
+    "rolls": 1,
+    "weighted": false,
+    "groups": [
+      {
+        "probability": 100.0,
+        "results": [
+          {
+            "item": "chemlib:carbon",
+            "count": 12
+          },
+          {
+            "item": "chemlib:hydrogen",
+            "count": 17
+          },
+          {
+            "item": "chemlib:nitrogen",
+            "count": 2
+          },
+          {
+            "item": "chemlib:oxygen",
+            "count": 4
+          }
+        ]
+      }
+    ]
+  }
+}
