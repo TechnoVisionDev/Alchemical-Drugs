@@ -6,10 +6,13 @@
     },
     {
       "item": "minecraft:paper"
+    },
+    {
+      "tag": "c:dyes"
     }
   ],
   "result": {
     "item": "alchemicaldrugs:acid_tab",
-    "count": 1
+    "count": 4
   }
 }

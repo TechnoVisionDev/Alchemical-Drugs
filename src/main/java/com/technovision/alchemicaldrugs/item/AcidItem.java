@@ -27,7 +27,7 @@ public class AcidItem extends AbstractFoodItem {
             if (isLSDEffectEnabled) { cancelThreads(key);}
             isLSDEffectEnabled = true;
 
-            Runnable baseSound = () -> user.playSound(SoundEvents.ENTITY_WARDEN_NEARBY_CLOSEST, 1.0f, 0.8f);
+            Runnable baseSound = () -> user.playSound(SoundEvents.ENTITY_WARDEN_AMBIENT, 1.5f, 0.8f);
             ScheduledFuture<?> audioThread = executor.scheduleAtFixedRate(baseSound, 3, 2, TimeUnit.SECONDS);
             ScheduledFuture<?> cancelThread = executor.schedule(() -> {
                 isLSDEffectEnabled = false;
