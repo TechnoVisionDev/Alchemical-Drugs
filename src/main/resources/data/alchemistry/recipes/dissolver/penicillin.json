@@ -1,0 +1,34 @@
+{
+  "type": "alchemistry:dissolver",
+  "group": "alchemistry:dissolver",
+  "input": {
+    "item": "alchemicaldrugs:penicillin"
+  },
+  "output": {
+    "rolls": 1,
+    "weighted": false,
+    "groups": [
+      {
+        "probability": 100.0,
+        "results": [
+          {
+            "item": "chemlib:carbon",
+            "count": 16
+          },
+          {
+            "item": "chemlib:hydrogen",
+            "count": 18
+          },
+          {
+            "item": "alchemicaldrugs:dinitrogen_tetroxide",
+            "count": 1
+          },
+          {
+            "item": "chemlib:sulfur",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  }
+}

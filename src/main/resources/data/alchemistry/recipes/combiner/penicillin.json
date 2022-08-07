@@ -1,0 +1,25 @@
+{
+  "type": "alchemistry:combiner",
+  "group": "alchemistry:combiner",
+  "input": [
+    {
+      "item": "chemlib:carbon",
+      "count": 16
+    },
+    {
+      "item": "chemlib:hydrogen",
+      "count": 18
+    },
+    {
+      "item": "alchemicaldrugs:dinitrogen_tetroxide",
+      "count": 1
+    },
+    {
+      "item": "chemlib:sulfur",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "alchemicaldrugs:penicillin"
+  }
+}

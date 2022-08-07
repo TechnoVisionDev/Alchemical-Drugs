@@ -49,7 +49,7 @@ dependencies {
 	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:9.1.520"
 
 	// Tech Reborn Energy API
-	include modApi('teamreborn:energy:2.2.0') {
+	modImplementation modApi('teamreborn:energy:2.2.0') {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
 
@@ -65,7 +65,6 @@ dependencies {
 
 	// Satin API
 	modImplementation "io.github.ladysnake:satin:1.9.0"
-	// Include Satin as a Jar-in-Jar dependency (optional)
 	include "io.github.ladysnake:satin:1.9.0"
 }
 
