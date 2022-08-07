@@ -13,7 +13,6 @@ import net.minecraft.world.World;
 import java.util.concurrent.TimeUnit;
 
 import static com.technovision.alchemicaldrugs.AlchemicalDrugsClient.*;
-import static com.technovision.alchemicaldrugs.AlchemicalDrugsClient.isMethEffectEnabled;
 
 public class HeroinItem extends AbstractFoodItem {
 
@@ -27,13 +26,13 @@ public class HeroinItem extends AbstractFoodItem {
             user.damage(DamageSource.STARVE, 1);
             if (!((PlayerEntity) user).isCreative()) user.getStackInHand(user.getActiveHand()).decrement(1);
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 30 * 20, 0));
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 30 * 20, 0));
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 30 * 20, 0));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 30 * 20, 0));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 30 * 20, 0));
         } else {
             String key = getName().getString();
             if (isHeroinEffectEnabled) { cancelThreads(key); }
             isHeroinEffectEnabled = true;
-            setThread(key, executor.schedule(() -> isHeroinEffectEnabled = false, 30, TimeUnit.SECONDS));
+            setThread(key, executor.schedule(() -> isHeroinEffectEnabled = false, 1, TimeUnit.MINUTES));
         }
         return stack;
     }

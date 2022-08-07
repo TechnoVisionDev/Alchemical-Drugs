@@ -17,6 +17,7 @@ public class ItemRegistry {
     public static AcidItem LSD = new AcidItem();
     public static PsilocybinItem PSILOCYBIN = new PsilocybinItem();
     public static ItemWithTooltip HYDROCODONE = new ItemWithTooltip("C₁₈H₂₁NO₃");
+    public static ItemWithTooltip DINITROGEN_TETROXIDE = new ItemWithTooltip("N₂O₄");
     public static AcidTabItem ACID_TAB = new AcidTabItem();
     public static Item SYRINGE = new Item(ITEM_SETTINGS);
     public static AdrenalineItem ADRENALINE_SHOT = new AdrenalineItem();
@@ -34,6 +35,7 @@ public class ItemRegistry {
         Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "lysergic_acid_diethylamide"), LSD);
         Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "psilocybin"), PSILOCYBIN);
         Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "hydrocodone"), HYDROCODONE);
+        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "dinitrogen_tetroxide"), DINITROGEN_TETROXIDE);
         Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "acid_tab"), ACID_TAB);
         Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "syringe"), SYRINGE);
         Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "adrenaline_shot"), ADRENALINE_SHOT);

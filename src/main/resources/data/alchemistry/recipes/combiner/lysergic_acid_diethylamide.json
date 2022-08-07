@@ -1,0 +1,25 @@
+{
+  "type": "alchemistry:combiner",
+  "group": "alchemistry:combiner",
+  "input": [
+    {
+      "item": "chemlib:carbon",
+      "count": 20
+    },
+    {
+      "item": "chemlib:hydrogen",
+      "count": 25
+    },
+    {
+      "item": "chemlib:nitrogen",
+      "count": 3
+    },
+    {
+      "item": "chemlib:oxygen",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "alchemicaldrugs:lysergic_acid_diethylamide"
+  }
+}

@@ -39,6 +39,7 @@ public class AcidTabItem extends AbstractFoodItem {
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 60 * 20, 0));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 60 * 20, 0));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 60 * 20, 0));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 180 * 20, 0));
         }
         return stack;
     }

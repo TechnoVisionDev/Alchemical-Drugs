@@ -18,7 +18,7 @@ import static com.technovision.alchemicaldrugs.AlchemicalDrugsClient.*;
 public class PsilocybinItem extends AbstractFoodItem {
 
     public PsilocybinItem() {
-        super("C₁₂H₁₇N₂O₄P");
+        super("C₁₂H₁₇(N₂O₄)P");
     }
 
     @Override
@@ -37,10 +37,10 @@ public class PsilocybinItem extends AbstractFoodItem {
             setThreads(key, audioThread, cancelThread);
         } else {
             if (!((PlayerEntity) user).isCreative()) user.getStackInHand(user.getActiveHand()).decrement(1);
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 5 * 20, 0));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 60 * 20, 1));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 60 * 20, 0));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 60 * 20, 0));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 180 * 20, 0));
         }
         return stack;
     }

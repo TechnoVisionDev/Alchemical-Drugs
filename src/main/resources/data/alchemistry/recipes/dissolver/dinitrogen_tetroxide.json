@@ -1,0 +1,26 @@
+{
+  "type": "alchemistry:dissolver",
+  "group": "alchemistry:dissolver",
+  "input": {
+    "item": "alchemicaldrugs:dinitrogen_tetroxide"
+  },
+  "output": {
+    "rolls": 1,
+    "weighted": false,
+    "groups": [
+      {
+        "probability": 100.0,
+        "results": [
+          {
+            "item": "chemlib:nitrogen",
+            "count": 2
+          },
+          {
+            "item": "chemlib:oxygen",
+            "count": 4
+          }
+        ]
+      }
+    ]
+  }
+}

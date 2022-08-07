@@ -1,0 +1,25 @@
+{
+  "type": "alchemistry:combiner",
+  "group": "alchemistry:combiner",
+  "input": [
+    {
+      "item": "chemlib:carbon",
+      "count": 17
+    },
+    {
+      "item": "chemlib:hydrogen",
+      "count": 21
+    },
+    {
+      "item": "chemlib:nitrogen",
+      "count": 1
+    },
+    {
+      "item": "chemlib:oxygen",
+      "count": 4
+    }
+  ],
+  "result": {
+    "item": "alchemicaldrugs:cocaine"
+  }
+}

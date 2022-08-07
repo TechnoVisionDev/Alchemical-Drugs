@@ -20,12 +20,12 @@
             "count": 17
           },
           {
-            "item": "chemlib:nitrogen",
-            "count": 2
+            "item": "alchemicaldrugs:dinitrogen_tetroxide",
+            "count": 1
           },
           {
-            "item": "chemlib:oxygen",
-            "count": 4
+            "item": "chemlib:phosphorus",
+            "count": 1
           }
         ]
       }
