@@ -19,11 +19,13 @@ public class AlchemicalDrugsClient implements ClientModInitializer {
     private static final ManagedShaderEffect COCAINE_SHADER = ShaderEffectManager.getInstance().manage(new Identifier("shaders/post/phosphor.json"));
     private static final ManagedShaderEffect METH_SHADER = ShaderEffectManager.getInstance().manage(new Identifier("shaders/post/bumpy.json"));
     private static final ManagedShaderEffect SHROOMS_SHADER = ShaderEffectManager.getInstance().manage(new Identifier(AlchemicalDrugs.MOD_ID, "shaders/post/shrooms.json"));
+    private static final ManagedShaderEffect HEROIN_SHADER = ShaderEffectManager.getInstance().manage(new Identifier("shaders/post/desaturate.json"));
 
     public static boolean isLSDEffectEnabled = false;
     public static boolean isCocaineEffectEnabled = false;
     public static boolean isMethEffectEnabled = false;
     public static boolean isShroomsEffectEnabled = false;
+    public static boolean isHeroinEffectEnabled = false;
 
     @Override
     public void onInitializeClient() {
@@ -39,6 +41,9 @@ public class AlchemicalDrugsClient implements ClientModInitializer {
             }
             if (isShroomsEffectEnabled) {
                 SHROOMS_SHADER.render(tickDelta);
+            }
+            if (isHeroinEffectEnabled) {
+                HEROIN_SHADER.render(tickDelta);
             }
         });
     }
