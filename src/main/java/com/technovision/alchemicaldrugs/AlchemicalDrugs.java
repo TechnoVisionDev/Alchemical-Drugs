@@ -13,7 +13,7 @@ public class AlchemicalDrugs implements ModInitializer {
 
     public static final ItemGroup TAB = FabricItemGroupBuilder.build(
             new Identifier(MOD_ID, "tab"),
-            () -> new ItemStack(ItemRegistry.COCAINE)
+            () -> new ItemStack(ItemRegistry.ANTIBIOTICS)
     );
 
     @Override

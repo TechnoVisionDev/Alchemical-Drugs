@@ -1,0 +1,10 @@
+{
+  "type": "alchemistry:compactor",
+  "group": "compactor",
+  "input": {
+    "item": "alchemicaldrugs:hydrocodone"
+  },
+  "result": {
+    "item": "alchemicaldrugs:painkillers"
+  }
+}
