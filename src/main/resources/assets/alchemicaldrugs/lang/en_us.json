@@ -17,5 +17,6 @@
   "item.alchemicaldrugs.painkillers": "Painkillers",
   "item.alchemicaldrugs.lean": "Lean",
   "item.alchemicaldrugs.dinitrogen_tetroxide": "Dinitrogen Tetroxide",
-  "item.alchemicaldrugs.penicillin": "Penicillin"
+  "item.alchemicaldrugs.penicillin": "Penicillin",
+  "entity.minecraft.villager.dealer": "Drug Dealer"
 }

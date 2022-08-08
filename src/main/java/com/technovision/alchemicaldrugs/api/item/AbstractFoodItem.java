@@ -47,15 +47,14 @@ public abstract class AbstractFoodItem extends ItemWithTooltip {
      * @param secondsTill the second to wait till applying effect.
      */
     public void setWithdrawl(PlayerEntity player, int secondsTill) {
-        if (random.nextDouble() >= 0.20) {
+        if (random.nextDouble() >= 0.15) {
             executor.schedule(() -> {
                 StatusEffect effect = null;
-                switch (random.nextInt(5) + 1) {
+                switch (random.nextInt(4) + 1) {
                     case 1 -> effect = StatusEffects.WEAKNESS;
                     case 2 -> effect = StatusEffects.SLOWNESS;
                     case 3 -> effect = StatusEffects.MINING_FATIGUE;
                     case 4 -> effect = StatusEffects.HUNGER;
-                    case 5 -> effect = StatusEffects.NAUSEA;
                 }
                 player.addStatusEffect(new StatusEffectInstance(effect, 30 * 20, 0));
             }, secondsTill, TimeUnit.SECONDS);

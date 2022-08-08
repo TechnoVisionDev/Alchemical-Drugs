@@ -1,6 +1,7 @@
 package com.technovision.alchemicaldrugs;
 
 import com.technovision.alchemicaldrugs.registry.ItemRegistry;
+import com.technovision.alchemicaldrugs.registry.VillagerRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
@@ -19,5 +20,6 @@ public class AlchemicalDrugs implements ModInitializer {
     @Override
     public void onInitialize() {
         ItemRegistry.registerItems();
+        VillagerRegistry.registerTrades();
     }
 }
