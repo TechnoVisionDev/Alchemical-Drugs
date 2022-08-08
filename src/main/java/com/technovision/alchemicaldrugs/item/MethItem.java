@@ -8,7 +8,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
 import static com.technovision.alchemicaldrugs.AlchemicalDrugsClient.*;
@@ -22,10 +21,12 @@ public class MethItem extends AbstractFoodItem {
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         if (!world.isClient()) {
-            if (!((PlayerEntity) user).isCreative()) user.getStackInHand(user.getActiveHand()).decrement(1);
+            PlayerEntity player = (PlayerEntity) user;
+            if (!player.isCreative()) user.getStackInHand(user.getActiveHand()).decrement(1);
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 30 * 20, 1));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 30 * 20, 0));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 30 * 20, 0));
+            setWithdrawl(player, 30);
         } else {
             String key = getName().getString();
             if (isMethEffectEnabled) { cancelThreads(key); }

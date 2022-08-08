@@ -24,10 +24,12 @@ public class HeroinItem extends AbstractFoodItem {
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         if (!world.isClient()) {
             user.damage(DamageSource.STARVE, 1);
-            if (!((PlayerEntity) user).isCreative()) user.getStackInHand(user.getActiveHand()).decrement(1);
+            PlayerEntity player = (PlayerEntity) user;
+            if (!player.isCreative()) user.getStackInHand(user.getActiveHand()).decrement(1);
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 30 * 20, 0));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 30 * 20, 0));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 30 * 20, 0));
+            setWithdrawl(player, 30);
         } else {
             String key = getName().getString();
             if (isHeroinEffectEnabled) { cancelThreads(key); }

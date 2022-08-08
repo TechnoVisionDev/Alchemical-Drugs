@@ -21,10 +21,12 @@ public class CocaineItem extends AbstractFoodItem {
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         if (!world.isClient()) {
-            if (!((PlayerEntity) user).isCreative()) user.getStackInHand(user.getActiveHand()).decrement(1);
+            PlayerEntity player = (PlayerEntity) user;
+            if (!player.isCreative()) user.getStackInHand(user.getActiveHand()).decrement(1);
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 30 * 20, 2));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 30 * 20, 1));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 30 * 20, 1));
+            setWithdrawl(player, 30);
         } else {
             String key = getName().getString();
             if (isCocaineEffectEnabled) { cancelThreads(key); }
