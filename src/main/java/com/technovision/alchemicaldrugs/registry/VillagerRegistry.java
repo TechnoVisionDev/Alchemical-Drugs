@@ -19,7 +19,7 @@ import net.minecraft.world.poi.PointOfInterestType;
 
 public class VillagerRegistry {
 
-    public static final PointOfInterestType DEALER_POI = registerPOI("dealer_poi", Blocks.CARVED_PUMPKIN);
+    public static final PointOfInterestType DEALER_POI = registerPOI("dealer_poi", Blocks.GOLD_BLOCK);
     public static final VillagerProfession DEALER = registerProfession("dealer", RegistryKey.of(Registry.POINT_OF_INTEREST_TYPE_KEY, new Identifier(AlchemicalDrugs.MOD_ID, "dealer_poi")));
 
     public static VillagerProfession registerProfession(String name, RegistryKey<PointOfInterestType> type) {
