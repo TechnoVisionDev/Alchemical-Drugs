@@ -39,7 +39,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	// ChemLib
-	modImplementation "com.github.SmashingMods:ChemLib-Fabric:1.19.1-1.0.0"
+	modImplementation "com.github.SmashingMods:ChemLib-Fabric:1.19.2-1.0.0"
 
 	// Patchouli
 	modImplementation "vazkii.patchouli:Patchouli:1.19-74-FABRIC"
@@ -61,7 +61,7 @@ dependencies {
 	}
 
 	// Alchemistry
-	modImplementation "com.github.SmashingMods:Alchemistry-Fabric:1.19.1-1.0.0"
+	modImplementation "com.github.SmashingMods:Alchemistry-Fabric:1.19.2-1.0.1"
 
 	// Satin API
 	modImplementation "io.github.ladysnake:satin:1.9.0"
