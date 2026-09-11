@@ -1,37 +1,29 @@
 package com.technovision.alchemicaldrugs.item;
 
 import com.technovision.alchemicaldrugs.api.item.AbstractFoodItem;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
-
-import java.util.concurrent.TimeUnit;
-
-import static com.technovision.alchemicaldrugs.AlchemicalDrugsClient.*;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 
 public class MethItem extends AbstractFoodItem {
 
-    public MethItem() {
-        super("C₁₀H₁₅N");
+    public MethItem(Properties properties) {
+        super(properties, "C₁₀H₁₅N");
     }
 
     @Override
-    public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        if (!world.isClient()) {
-            PlayerEntity player = (PlayerEntity) user;
-            if (!player.isCreative()) user.getStackInHand(user.getActiveHand()).decrement(1);
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 30 * 20, 1));
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 30 * 20, 0));
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 30 * 20, 0));
-            setWithdrawl(player, 30);
-        } else {
-            String key = getName().getString();
-            if (isMethEffectEnabled) { cancelThreads(key); }
-            isMethEffectEnabled = true;
-            setThread(key, executor.schedule(() -> isMethEffectEnabled = false, 30, TimeUnit.SECONDS));
+    public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity user) {
+        if (!world.isClientSide()) {
+            com.technovision.alchemicaldrugs.effect.DrugEffects.start(user, com.technovision.alchemicaldrugs.effect.DrugEffect.METH);
+
+            consume(stack, user);
+            user.addEffect(new MobEffectInstance(MobEffects.SPEED, 30 * 20, 1));
+            user.addEffect(new MobEffectInstance(MobEffects.STRENGTH, 30 * 20, 0));
+            user.addEffect(new MobEffectInstance(MobEffects.RESISTANCE, 30 * 20, 0));
+            if (user instanceof Player player) setWithdrawl(player, 30);
         }
         return stack;
     }

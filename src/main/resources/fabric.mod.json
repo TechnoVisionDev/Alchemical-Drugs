@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "id": "alchemicaldrugs",
   "version": "${version}",
-
   "name": "Alchemical Drugs",
   "description": "Addon for Alchemistry that adds illicit substances and the ability to synthesize them.",
   "authors": [
@@ -12,10 +11,8 @@
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/alchemical-drugs",
     "sources": "https://github.com/TechnoVisionDev/Alchemical-Drugs"
   },
-
   "license": "MIT",
   "icon": "assets/alchemicaldrugs/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -26,14 +23,14 @@
     ]
   },
   "mixins": [
+    "alchemicaldrugs.mixins.json"
   ],
-
   "depends": {
-    "fabricloader": ">=0.14.6",
-    "fabric": "*",
-    "minecraft": "~1.19",
-    "java": ">=17",
-    "alchemistry": ">=1.0.0",
-    "chemlib": ">=1.0.0"
+    "fabricloader": ">=0.19.5",
+    "fabric-api": ">=0.160.0",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "alchemistry": ">=1.0.3",
+    "chemlib": ">=1.0.2"
   }
 }

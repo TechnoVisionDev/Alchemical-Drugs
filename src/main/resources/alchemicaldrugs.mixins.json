@@ -1,12 +1,9 @@
 {
   "required": true,
-  "minVersion": "0.8",
-  "package": "net.fabricmc.example.mixin",
-  "compatibilityLevel": "JAVA_17",
-  "mixins": [
-  ],
+  "package": "com.technovision.alchemicaldrugs.mixin",
+  "compatibilityLevel": "JAVA_25",
   "client": [
-    "ExampleMixin"
+    "GameRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

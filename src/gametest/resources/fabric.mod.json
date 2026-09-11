@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "alchemicaldrugs-test",
+  "version": "1.0.0",
+  "name": "Alchemical Drugs port tests",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-gametest": ["com.technovision.alchemicaldrugs.test.AlchemicalDrugsGameTest"],
+    "fabric-client-gametest": ["com.technovision.alchemicaldrugs.test.AlchemicalDrugsClientTest"]
+  }
+}

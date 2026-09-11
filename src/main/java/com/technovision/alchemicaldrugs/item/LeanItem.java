@@ -1,32 +1,32 @@
 package com.technovision.alchemicaldrugs.item;
 
 import com.technovision.alchemicaldrugs.api.item.AbstractFoodItem;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.UseAction;
-import net.minecraft.world.World;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemUseAnimation;
+import net.minecraft.world.level.Level;
 
 public class LeanItem extends AbstractFoodItem {
 
-    public LeanItem() {
-        super(null);
+    public LeanItem(Properties properties) {
+        super(properties, null);
     }
 
     @Override
-    public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        if (!world.isClient()) {
-            if (!((PlayerEntity) user).isCreative()) user.getStackInHand(user.getActiveHand()).decrement(1);
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 50 * 20, 0));
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 30 * 20, 0));
+    public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity user) {
+        if (!world.isClientSide()) {
+            consume(stack, user);
+            user.addEffect(new MobEffectInstance(MobEffects.RESISTANCE, 50 * 20, 0));
+            user.addEffect(new MobEffectInstance(MobEffects.NAUSEA, 30 * 20, 0));
         }
         return stack;
     }
 
     @Override
-    public UseAction getUseAction(ItemStack stack) {
-        return UseAction.DRINK;
+    public ItemUseAnimation getUseAnimation(ItemStack stack) {
+        return ItemUseAnimation.DRINK;
     }
 }

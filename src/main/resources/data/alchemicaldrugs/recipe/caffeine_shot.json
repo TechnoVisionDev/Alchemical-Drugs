@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "chemlib:caffeine",
+    "alchemicaldrugs:syringe"
+  ],
+  "result": {
+    "count": 1,
+    "id": "alchemicaldrugs:caffeine_shot"
+  }
+}
