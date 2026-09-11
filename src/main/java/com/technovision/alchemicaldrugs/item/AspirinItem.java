@@ -1,22 +1,22 @@
 package com.technovision.alchemicaldrugs.item;
 
 import com.technovision.alchemicaldrugs.api.item.AbstractFoodItem;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 
 public class AspirinItem extends AbstractFoodItem {
 
-    public AspirinItem() {
-        super(null);
+    public AspirinItem(Properties properties) {
+        super(properties, null);
     }
 
     @Override
-    public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        if (!world.isClient()) {
+    public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity user) {
+        if (!world.isClientSide()) {
             user.heal(5.0f);
-            if (!((PlayerEntity) user).isCreative()) user.getStackInHand(user.getActiveHand()).decrement(1);
+            consume(stack, user);
         }
         return stack;
     }

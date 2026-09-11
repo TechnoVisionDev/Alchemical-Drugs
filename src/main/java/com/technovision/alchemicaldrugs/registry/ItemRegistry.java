@@ -1,51 +1,40 @@
 package com.technovision.alchemicaldrugs.registry;
-
 import com.technovision.alchemicaldrugs.AlchemicalDrugs;
 import com.technovision.alchemicaldrugs.api.item.ItemWithTooltip;
 import com.technovision.alchemicaldrugs.item.*;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.Item;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
-
-public class ItemRegistry {
-
-    public static final FabricItemSettings ITEM_SETTINGS = new FabricItemSettings().group(AlchemicalDrugs.TAB);
-    public static CocaineItem COCAINE = new CocaineItem();
-    public static MethItem METH = new MethItem();
-    public static ItemWithTooltip HEROIN = new ItemWithTooltip("C₂₁H₂₃NO₅");
-    public static AcidItem LSD = new AcidItem();
-    public static PsilocybinItem PSILOCYBIN = new PsilocybinItem();
-    public static ItemWithTooltip HYDROCODONE = new ItemWithTooltip("C₁₈H₂₁NO₃");
-    public static ItemWithTooltip DINITROGEN_TETROXIDE = new ItemWithTooltip("N₂O₄");
-    public static ItemWithTooltip PENICILLIN = new ItemWithTooltip("C₁₆H₁₈(N₂O₄)S");
-    public static AcidTabItem ACID_TAB = new AcidTabItem();
-    public static Item SYRINGE = new Item(ITEM_SETTINGS);
-    public static AdrenalineItem ADRENALINE_SHOT = new AdrenalineItem();
-    public static CaffeineItem CAFFEINE_SHOT = new CaffeineItem();
-    public static HeroinItem HEROIN_SHOT = new HeroinItem();
-    public static AspirinItem ASPIRIN = new AspirinItem();
-    public static AntibioticsItem ANTIBIOTICS = new AntibioticsItem();
-    public static PainkillerItem PAINKILLERS = new PainkillerItem();
-    public static LeanItem LEAN = new LeanItem();
-
-    public static void registerItems() {
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "cocaine"), COCAINE);
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "methamphetamine"), METH);
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "heroin"), HEROIN);
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "lysergic_acid_diethylamide"), LSD);
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "psilocybin"), PSILOCYBIN);
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "hydrocodone"), HYDROCODONE);
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "dinitrogen_tetroxide"), DINITROGEN_TETROXIDE);
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "penicillin"), PENICILLIN);
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "acid_tab"), ACID_TAB);
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "syringe"), SYRINGE);
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "adrenaline_shot"), ADRENALINE_SHOT);
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "caffeine_shot"), CAFFEINE_SHOT);
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "heroin_shot"), HEROIN_SHOT);
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "aspirin"), ASPIRIN);
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "antibiotics"), ANTIBIOTICS);
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "painkillers"), PAINKILLERS);
-        Registry.register(Registry.ITEM, new Identifier(AlchemicalDrugs.MOD_ID, "lean"), LEAN);
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.Item;
+import java.util.ArrayList;
+import java.util.List;
+public final class ItemRegistry {
+    public static final List<Item> ITEMS = new ArrayList<>();
+    public static final CocaineItem COCAINE = register("cocaine", new CocaineItem(properties("cocaine")));
+    public static final MethItem METH = register("methamphetamine", new MethItem(properties("methamphetamine")));
+    public static final ItemWithTooltip HEROIN = register("heroin", new ItemWithTooltip(properties("heroin"), "C₂₁H₂₃NO₅"));
+    public static final AcidItem LSD = register("lysergic_acid_diethylamide", new AcidItem(properties("lysergic_acid_diethylamide")));
+    public static final PsilocybinItem PSILOCYBIN = register("psilocybin", new PsilocybinItem(properties("psilocybin")));
+    public static final ItemWithTooltip HYDROCODONE = register("hydrocodone", new ItemWithTooltip(properties("hydrocodone"), "C₁₈H₂₁NO₃"));
+    public static final ItemWithTooltip DINITROGEN_TETROXIDE = register("dinitrogen_tetroxide", new ItemWithTooltip(properties("dinitrogen_tetroxide"), "N₂O₄"));
+    public static final ItemWithTooltip PENICILLIN = register("penicillin", new ItemWithTooltip(properties("penicillin"), "C₁₆H₁₈(N₂O₄)S"));
+    public static final AcidTabItem ACID_TAB = register("acid_tab", new AcidTabItem(properties("acid_tab")));
+    public static final Item SYRINGE = register("syringe", new Item(properties("syringe")));
+    public static final AdrenalineItem ADRENALINE_SHOT = register("adrenaline_shot", new AdrenalineItem(properties("adrenaline_shot")));
+    public static final CaffeineItem CAFFEINE_SHOT = register("caffeine_shot", new CaffeineItem(properties("caffeine_shot")));
+    public static final HeroinItem HEROIN_SHOT = register("heroin_shot", new HeroinItem(properties("heroin_shot")));
+    public static final AspirinItem ASPIRIN = register("aspirin", new AspirinItem(properties("aspirin")));
+    public static final AntibioticsItem ANTIBIOTICS = register("antibiotics", new AntibioticsItem(properties("antibiotics")));
+    public static final PainkillerItem PAINKILLERS = register("painkillers", new PainkillerItem(properties("painkillers")));
+    public static final LeanItem LEAN = register("lean", new LeanItem(properties("lean")));
+    private static Item.Properties properties(String id) {
+        return new Item.Properties().setId(ResourceKey.create(Registries.ITEM, AlchemicalDrugs.id(id)));
     }
+    private static <T extends Item> T register(String id, T item) {
+        Registry.register(BuiltInRegistries.ITEM, AlchemicalDrugs.id(id), item);
+        ITEMS.add(item);
+        return item;
+    }
+    public static void registerItems() { }
 }

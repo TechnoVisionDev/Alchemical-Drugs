@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "chemlib:ethanol",
+    "alchemicaldrugs:hydrocodone",
+    "minecraft:glass_bottle"
+  ],
+  "result": {
+    "count": 1,
+    "id": "alchemicaldrugs:lean"
+  }
+}

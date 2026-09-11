@@ -1,0 +1,13 @@
+{
+  "wants": {
+    "id": "alchemicaldrugs:psilocybin",
+    "count": 1
+  },
+  "gives": {
+    "id": "minecraft:emerald",
+    "count": 3
+  },
+  "max_uses": 8,
+  "xp": 10,
+  "reputation_discount": 0.02
+}

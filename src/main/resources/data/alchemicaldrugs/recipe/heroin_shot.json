@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "alchemicaldrugs:heroin",
+    "alchemicaldrugs:syringe"
+  ],
+  "result": {
+    "count": 1,
+    "id": "alchemicaldrugs:heroin_shot"
+  }
+}

@@ -1,39 +1,42 @@
-# Automatically build the project and run any configured tests for every push
-# and submitted pull request. This can help catch issues that only occur on
-# certain platforms or Java versions, and provides a first line of defence
-# against bad commits.
-
 name: build
-on: [pull_request, push]
-
+on: [pull_request, push, workflow_dispatch]
+permissions:
+  contents: read
 jobs:
   build:
-    strategy:
-      matrix:
-        # Use these Java versions
-        java: [
-          17,    # Current Java LTS & minimum supported by Minecraft
-        ]
-        # and run on both Linux and Windows
-        os: [ubuntu-20.04, windows-2022]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
-      - name: checkout repository
-        uses: actions/checkout@v2
-      - name: validate gradle wrapper
-        uses: gradle/wrapper-validation-action@v1
-      - name: setup jdk ${{ matrix.java }}
-        uses: actions/setup-java@v1
+      - uses: actions/checkout@v4
         with:
-          java-version: ${{ matrix.java }}
-      - name: make gradle wrapper executable
-        if: ${{ runner.os != 'Windows' }}
-        run: chmod +x ./gradlew
-      - name: build
-        run: ./gradlew build
-      - name: capture build artifacts
-        if: ${{ runner.os == 'Linux' && matrix.java == '17' }} # Only upload artifacts built from latest java on one OS
-        uses: actions/upload-artifact@v2
+          path: Alchemical-Drugs
+      - uses: actions/checkout@v4
         with:
-          name: Artifacts
-          path: build/libs/
+          repository: SmashingMods/ChemLib-Fabric
+          ref: 99e4088cbf19a8a863be8f2b61ef7d9feca9f15c
+          path: ChemLib-Fabric
+      - uses: actions/checkout@v4
+        with:
+          repository: SmashingMods/Alchemistry-Fabric
+          ref: 5e7f6139ff632a2fed8a754b36fc2b254bc4f4d9
+          path: Alchemistry-Fabric
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Build companion chemistry ports
+        run: |
+          bash ChemLib-Fabric/gradlew -p ChemLib-Fabric assemble
+          bash Alchemistry-Fabric/gradlew -p Alchemistry-Fabric assemble -Pchemlib_jar="$GITHUB_WORKSPACE/ChemLib-Fabric/build/libs/ChemLib-1.0.2+mc26.2.jar"
+      - name: Build addon and run server tests
+        working-directory: Alchemical-Drugs
+        run: bash gradlew build -Palchemistry_jar="$GITHUB_WORKSPACE/Alchemistry-Fabric/build/libs/Alchemistry-1.0.3+mc26.2.jar"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AlchemicalDrugs-26.2
+          path: Alchemical-Drugs/build/libs/*.jar
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: test-logs
+          path: Alchemical-Drugs/build/run/gameTest/logs/

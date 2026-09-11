@@ -1,0 +1,1262 @@
+{
+  "items": {
+    "AdrenalineItem": {
+      "effects": [
+        [
+          "SPEED",
+          "20",
+          "0"
+        ],
+        [
+          "JUMP_BOOST",
+          "20",
+          "0"
+        ],
+        [
+          "HASTE",
+          "20",
+          "0"
+        ]
+      ],
+      "formula": "null"
+    },
+    "PainkillerItem": {
+      "effects": [
+        [
+          "REGENERATION",
+          "5",
+          "0"
+        ],
+        [
+          "RESISTANCE",
+          "30",
+          "0"
+        ]
+      ],
+      "formula": "null"
+    },
+    "CaffeineItem": {
+      "effects": [
+        [
+          "SPEED",
+          "20",
+          "0"
+        ],
+        [
+          "JUMP_BOOST",
+          "20",
+          "0"
+        ],
+        [
+          "HASTE",
+          "20",
+          "0"
+        ]
+      ],
+      "formula": "null"
+    },
+    "AntibioticsItem": {
+      "effects": [],
+      "formula": "null"
+    },
+    "AcidTabItem": {
+      "effects": [
+        [
+          "SPEED",
+          "60",
+          "0"
+        ],
+        [
+          "GLOWING",
+          "60",
+          "0"
+        ],
+        [
+          "NIGHT_VISION",
+          "60",
+          "0"
+        ],
+        [
+          "LUCK",
+          "180",
+          "0"
+        ]
+      ],
+      "formula": "null"
+    },
+    "HeroinItem": {
+      "effects": [
+        [
+          "SATURATION",
+          "30",
+          "0"
+        ],
+        [
+          "REGENERATION",
+          "30",
+          "0"
+        ],
+        [
+          "DARKNESS",
+          "30",
+          "0"
+        ]
+      ],
+      "formula": "null"
+    },
+    "AspirinItem": {
+      "effects": [],
+      "formula": "null"
+    },
+    "LeanItem": {
+      "effects": [
+        [
+          "RESISTANCE",
+          "50",
+          "0"
+        ],
+        [
+          "NAUSEA",
+          "30",
+          "0"
+        ]
+      ],
+      "formula": "null"
+    },
+    "MethItem": {
+      "effects": [
+        [
+          "SPEED",
+          "30",
+          "1"
+        ],
+        [
+          "STRENGTH",
+          "30",
+          "0"
+        ],
+        [
+          "RESISTANCE",
+          "30",
+          "0"
+        ]
+      ],
+      "formula": "\"C\u2081\u2080H\u2081\u2085N\""
+    },
+    "PsilocybinItem": {
+      "effects": [
+        [
+          "SLOWNESS",
+          "60",
+          "1"
+        ],
+        [
+          "GLOWING",
+          "60",
+          "0"
+        ],
+        [
+          "NIGHT_VISION",
+          "60",
+          "0"
+        ],
+        [
+          "LUCK",
+          "180",
+          "0"
+        ]
+      ],
+      "formula": "\"C\u2081\u2082H\u2081\u2087(N\u2082O\u2084)P\""
+    },
+    "AcidItem": {
+      "effects": [
+        [
+          "SPEED",
+          "60",
+          "0"
+        ],
+        [
+          "GLOWING",
+          "60",
+          "0"
+        ],
+        [
+          "NIGHT_VISION",
+          "60",
+          "0"
+        ],
+        [
+          "LUCK",
+          "180",
+          "0"
+        ]
+      ],
+      "formula": "\"C\u2082\u2080H\u2082\u2085N\u2083O\""
+    },
+    "CocaineItem": {
+      "effects": [
+        [
+          "SPEED",
+          "30",
+          "2"
+        ],
+        [
+          "JUMP_BOOST",
+          "30",
+          "1"
+        ],
+        [
+          "HASTE",
+          "30",
+          "1"
+        ]
+      ],
+      "formula": "\"C\u2081\u2087H\u2082\u2081NO\u2084\""
+    }
+  },
+  "trades": [
+    {
+      "level": 1,
+      "wants": {
+        "id": "alchemicaldrugs:cocaine",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 2
+      },
+      "max_uses": 6,
+      "xp": 2,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 1,
+      "wants": {
+        "id": "alchemicaldrugs:methamphetamine",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 2
+      },
+      "max_uses": 6,
+      "xp": 2,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 1,
+      "wants": {
+        "id": "alchemicaldrugs:heroin",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 2
+      },
+      "max_uses": 6,
+      "xp": 2,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 1,
+      "wants": {
+        "id": "alchemicaldrugs:painkillers",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 2
+      },
+      "max_uses": 6,
+      "xp": 2,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 1,
+      "wants": {
+        "id": "alchemicaldrugs:psilocybin",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 2
+      },
+      "max_uses": 6,
+      "xp": 2,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 1,
+      "wants": {
+        "id": "alchemicaldrugs:lysergic_acid_diethylamide",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 2
+      },
+      "max_uses": 6,
+      "xp": 2,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 1,
+      "wants": {
+        "id": "minecraft:emerald",
+        "count": 5
+      },
+      "gives": {
+        "id": "alchemicaldrugs:cocaine",
+        "count": 1
+      },
+      "max_uses": 6,
+      "xp": 2,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 1,
+      "wants": {
+        "id": "minecraft:emerald",
+        "count": 5
+      },
+      "gives": {
+        "id": "alchemicaldrugs:methamphetamine",
+        "count": 1
+      },
+      "max_uses": 6,
+      "xp": 2,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 1,
+      "wants": {
+        "id": "minecraft:emerald",
+        "count": 5
+      },
+      "gives": {
+        "id": "alchemicaldrugs:heroin",
+        "count": 1
+      },
+      "max_uses": 6,
+      "xp": 2,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 1,
+      "wants": {
+        "id": "minecraft:emerald",
+        "count": 5
+      },
+      "gives": {
+        "id": "alchemicaldrugs:psilocybin",
+        "count": 1
+      },
+      "max_uses": 6,
+      "xp": 2,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 1,
+      "wants": {
+        "id": "minecraft:emerald",
+        "count": 5
+      },
+      "gives": {
+        "id": "alchemicaldrugs:lysergic_acid_diethylamide",
+        "count": 1
+      },
+      "max_uses": 6,
+      "xp": 2,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 2,
+      "wants": {
+        "id": "alchemicaldrugs:cocaine",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 2
+      },
+      "max_uses": 8,
+      "xp": 10,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 2,
+      "wants": {
+        "id": "alchemicaldrugs:methamphetamine",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 3
+      },
+      "max_uses": 8,
+      "xp": 10,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 2,
+      "wants": {
+        "id": "alchemicaldrugs:heroin",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 2
+      },
+      "max_uses": 8,
+      "xp": 10,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 2,
+      "wants": {
+        "id": "alchemicaldrugs:painkillers",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 3
+      },
+      "max_uses": 8,
+      "xp": 10,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 2,
+      "wants": {
+        "id": "alchemicaldrugs:psilocybin",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 3
+      },
+      "max_uses": 8,
+      "xp": 10,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 2,
+      "wants": {
+        "id": "alchemicaldrugs:lysergic_acid_diethylamide",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 2
+      },
+      "max_uses": 8,
+      "xp": 10,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 2,
+      "wants": {
+        "id": "minecraft:emerald",
+        "count": 4
+      },
+      "gives": {
+        "id": "alchemicaldrugs:cocaine",
+        "count": 1
+      },
+      "max_uses": 8,
+      "xp": 10,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 2,
+      "wants": {
+        "id": "minecraft:emerald",
+        "count": 5
+      },
+      "gives": {
+        "id": "alchemicaldrugs:methamphetamine",
+        "count": 1
+      },
+      "max_uses": 8,
+      "xp": 10,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 2,
+      "wants": {
+        "id": "minecraft:emerald",
+        "count": 4
+      },
+      "gives": {
+        "id": "alchemicaldrugs:heroin",
+        "count": 1
+      },
+      "max_uses": 8,
+      "xp": 10,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 2,
+      "wants": {
+        "id": "minecraft:emerald",
+        "count": 5
+      },
+      "gives": {
+        "id": "alchemicaldrugs:psilocybin",
+        "count": 1
+      },
+      "max_uses": 8,
+      "xp": 10,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 2,
+      "wants": {
+        "id": "minecraft:emerald",
+        "count": 4
+      },
+      "gives": {
+        "id": "alchemicaldrugs:lysergic_acid_diethylamide",
+        "count": 1
+      },
+      "max_uses": 8,
+      "xp": 10,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 3,
+      "wants": {
+        "id": "alchemicaldrugs:cocaine",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 3
+      },
+      "max_uses": 10,
+      "xp": 18,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 3,
+      "wants": {
+        "id": "alchemicaldrugs:methamphetamine",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 4
+      },
+      "max_uses": 10,
+      "xp": 18,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 3,
+      "wants": {
+        "id": "alchemicaldrugs:heroin",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 3
+      },
+      "max_uses": 10,
+      "xp": 18,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 3,
+      "wants": {
+        "id": "alchemicaldrugs:painkillers",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 4
+      },
+      "max_uses": 10,
+      "xp": 18,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 3,
+      "wants": {
+        "id": "alchemicaldrugs:psilocybin",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 5
+      },
+      "max_uses": 10,
+      "xp": 18,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 3,
+      "wants": {
+        "id": "alchemicaldrugs:lysergic_acid_diethylamide",
+        "count": 1
+      },
+      "gives": {
+        "id": "minecraft:emerald",
+        "count": 4
+      },
+      "max_uses": 10,
+      "xp": 18,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 3,
+      "wants": {
+        "id": "minecraft:emerald",
+        "count": 4
+      },
+      "gives": {
+        "id": "alchemicaldrugs:cocaine",
+        "count": 1
+      },
+      "max_uses": 10,
+      "xp": 18,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 3,
+      "wants": {
+        "id": "minecraft:emerald",
+        "count": 5
+      },
+      "gives": {
+        "id": "alchemicaldrugs:methamphetamine",
+        "count": 1
+      },
+      "max_uses": 10,
+      "xp": 18,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 3,
+      "wants": {
+        "id": "minecraft:emerald",
+        "count": 4
+      },
+      "gives": {
+        "id": "alchemicaldrugs:heroin",
+        "count": 1
+      },
+      "max_uses": 10,
+      "xp": 18,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 3,
+      "wants": {
+        "id": "minecraft:emerald",
+        "count": 5
+      },
+      "gives": {
+        "id": "alchemicaldrugs:psilocybin",
+        "count": 1
+      },
+      "max_uses": 10,
+      "xp": 18,
+      "reputation_discount": 0.02
+    },
+    {
+      "level": 3,
+      "wants": {
+        "id": "minecraft:emerald",
+        "count": 4
+      },
+      "gives": {
+        "id": "alchemicaldrugs:lysergic_acid_diethylamide",
+        "count": 1
+      },
+      "max_uses": 10,
+      "xp": 18,
+      "reputation_discount": 0.02
+    }
+  ],
+  "recipes": {
+    "data/alchemicaldrugs/recipes/caffeine_shot.json": {
+      "type": "minecraft:crafting_shapeless",
+      "ingredients": [
+        {
+          "item": "chemlib:caffeine"
+        },
+        {
+          "item": "alchemicaldrugs:syringe"
+        }
+      ],
+      "result": {
+        "item": "alchemicaldrugs:caffeine_shot",
+        "count": 1
+      }
+    },
+    "data/alchemicaldrugs/recipes/acid_tab.json": {
+      "type": "minecraft:crafting_shapeless",
+      "ingredients": [
+        {
+          "item": "alchemicaldrugs:lysergic_acid_diethylamide"
+        },
+        {
+          "item": "minecraft:paper"
+        },
+        {
+          "tag": "c:dyes"
+        }
+      ],
+      "result": {
+        "item": "alchemicaldrugs:acid_tab",
+        "count": 4
+      }
+    },
+    "data/alchemicaldrugs/recipes/syringe.json": {
+      "type": "minecraft:crafting_shaped",
+      "pattern": [
+        "i  ",
+        " G ",
+        "  G"
+      ],
+      "key": {
+        "i": {
+          "item": "minecraft:iron_ingot"
+        },
+        "G": {
+          "item": "minecraft:glass"
+        }
+      },
+      "result": {
+        "item": "alchemicaldrugs:syringe",
+        "count": 1
+      }
+    },
+    "data/alchemicaldrugs/recipes/adrenaline_shot.json": {
+      "type": "minecraft:crafting_shapeless",
+      "ingredients": [
+        {
+          "item": "chemlib:epinephrine"
+        },
+        {
+          "item": "alchemicaldrugs:syringe"
+        }
+      ],
+      "result": {
+        "item": "alchemicaldrugs:adrenaline_shot",
+        "count": 1
+      }
+    },
+    "data/alchemicaldrugs/recipes/lean.json": {
+      "type": "minecraft:crafting_shapeless",
+      "ingredients": [
+        {
+          "item": "chemlib:ethanol"
+        },
+        {
+          "item": "alchemicaldrugs:hydrocodone"
+        },
+        {
+          "item": "minecraft:glass_bottle"
+        }
+      ],
+      "result": {
+        "item": "alchemicaldrugs:lean",
+        "count": 1
+      }
+    },
+    "data/alchemicaldrugs/recipes/heroin_shot.json": {
+      "type": "minecraft:crafting_shapeless",
+      "ingredients": [
+        {
+          "item": "alchemicaldrugs:heroin"
+        },
+        {
+          "item": "alchemicaldrugs:syringe"
+        }
+      ],
+      "result": {
+        "item": "alchemicaldrugs:heroin_shot",
+        "count": 1
+      }
+    },
+    "data/alchemistry/recipes/combiner/lysergic_acid_diethylamide.json": {
+      "type": "alchemistry:combiner",
+      "group": "alchemistry:combiner",
+      "input": [
+        {
+          "item": "chemlib:carbon",
+          "count": 20
+        },
+        {
+          "item": "chemlib:hydrogen",
+          "count": 25
+        },
+        {
+          "item": "chemlib:nitrogen",
+          "count": 3
+        },
+        {
+          "item": "chemlib:oxygen",
+          "count": 1
+        }
+      ],
+      "result": {
+        "item": "alchemicaldrugs:lysergic_acid_diethylamide"
+      }
+    },
+    "data/alchemistry/recipes/combiner/heroin.json": {
+      "type": "alchemistry:combiner",
+      "group": "alchemistry:combiner",
+      "input": [
+        {
+          "item": "chemlib:carbon",
+          "count": 21
+        },
+        {
+          "item": "chemlib:hydrogen",
+          "count": 23
+        },
+        {
+          "item": "chemlib:nitrogen",
+          "count": 1
+        },
+        {
+          "item": "chemlib:oxygen",
+          "count": 5
+        }
+      ],
+      "result": {
+        "item": "alchemicaldrugs:heroin"
+      }
+    },
+    "data/alchemistry/recipes/combiner/psilocybin.json": {
+      "type": "alchemistry:combiner",
+      "group": "alchemistry:combiner",
+      "input": [
+        {
+          "item": "chemlib:carbon",
+          "count": 12
+        },
+        {
+          "item": "chemlib:hydrogen",
+          "count": 17
+        },
+        {
+          "item": "alchemicaldrugs:dinitrogen_tetroxide",
+          "count": 1
+        },
+        {
+          "item": "chemlib:phosphorus",
+          "count": 1
+        }
+      ],
+      "result": {
+        "item": "alchemicaldrugs:psilocybin"
+      }
+    },
+    "data/alchemistry/recipes/combiner/penicillin.json": {
+      "type": "alchemistry:combiner",
+      "group": "alchemistry:combiner",
+      "input": [
+        {
+          "item": "chemlib:carbon",
+          "count": 16
+        },
+        {
+          "item": "chemlib:hydrogen",
+          "count": 18
+        },
+        {
+          "item": "alchemicaldrugs:dinitrogen_tetroxide",
+          "count": 1
+        },
+        {
+          "item": "chemlib:sulfur",
+          "count": 1
+        }
+      ],
+      "result": {
+        "item": "alchemicaldrugs:penicillin"
+      }
+    },
+    "data/alchemistry/recipes/combiner/dinitrogen_tetroxide.json": {
+      "type": "alchemistry:combiner",
+      "group": "alchemistry:combiner",
+      "input": [
+        {
+          "item": "chemlib:nitrogen",
+          "count": 2
+        },
+        {
+          "item": "chemlib:oxygen",
+          "count": 4
+        }
+      ],
+      "result": {
+        "item": "alchemicaldrugs:dinitrogen_tetroxide"
+      }
+    },
+    "data/alchemistry/recipes/combiner/hydrocodone.json": {
+      "type": "alchemistry:combiner",
+      "group": "alchemistry:combiner",
+      "input": [
+        {
+          "item": "chemlib:carbon",
+          "count": 18
+        },
+        {
+          "item": "chemlib:hydrogen",
+          "count": 21
+        },
+        {
+          "item": "chemlib:nitrogen",
+          "count": 1
+        },
+        {
+          "item": "chemlib:oxygen",
+          "count": 3
+        }
+      ],
+      "result": {
+        "item": "alchemicaldrugs:hydrocodone"
+      }
+    },
+    "data/alchemistry/recipes/combiner/cocaine.json": {
+      "type": "alchemistry:combiner",
+      "group": "alchemistry:combiner",
+      "input": [
+        {
+          "item": "chemlib:carbon",
+          "count": 17
+        },
+        {
+          "item": "chemlib:hydrogen",
+          "count": 21
+        },
+        {
+          "item": "chemlib:nitrogen",
+          "count": 1
+        },
+        {
+          "item": "chemlib:oxygen",
+          "count": 4
+        }
+      ],
+      "result": {
+        "item": "alchemicaldrugs:cocaine"
+      }
+    },
+    "data/alchemistry/recipes/combiner/methamphetamine.json": {
+      "type": "alchemistry:combiner",
+      "group": "alchemistry:combiner",
+      "input": [
+        {
+          "item": "chemlib:carbon",
+          "count": 10
+        },
+        {
+          "item": "chemlib:hydrogen",
+          "count": 15
+        },
+        {
+          "item": "chemlib:nitrogen",
+          "count": 1
+        }
+      ],
+      "result": {
+        "item": "alchemicaldrugs:methamphetamine"
+      }
+    },
+    "data/alchemistry/recipes/compactor/painkillers.json": {
+      "type": "alchemistry:compactor",
+      "group": "compactor",
+      "input": {
+        "item": "alchemicaldrugs:hydrocodone"
+      },
+      "result": {
+        "item": "alchemicaldrugs:painkillers"
+      }
+    },
+    "data/alchemistry/recipes/compactor/antibiotics.json": {
+      "type": "alchemistry:compactor",
+      "group": "compactor",
+      "input": {
+        "item": "alchemicaldrugs:penicillin"
+      },
+      "result": {
+        "item": "alchemicaldrugs:antibiotics"
+      }
+    },
+    "data/alchemistry/recipes/compactor/aspirin.json": {
+      "type": "alchemistry:compactor",
+      "group": "compactor",
+      "input": {
+        "item": "chemlib:acetylsalicylic_acid"
+      },
+      "result": {
+        "item": "alchemicaldrugs:aspirin"
+      }
+    },
+    "data/alchemistry/recipes/dissolver/lysergic_acid_diethylamide.json": {
+      "type": "alchemistry:dissolver",
+      "group": "alchemistry:dissolver",
+      "input": {
+        "item": "alchemicaldrugs:lysergic_acid_diethylamide"
+      },
+      "output": {
+        "rolls": 1,
+        "weighted": false,
+        "groups": [
+          {
+            "probability": 100.0,
+            "results": [
+              {
+                "item": "chemlib:carbon",
+                "count": 20
+              },
+              {
+                "item": "chemlib:hydrogen",
+                "count": 25
+              },
+              {
+                "item": "chemlib:nitrogen",
+                "count": 3
+              },
+              {
+                "item": "chemlib:oxygen",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "data/alchemistry/recipes/dissolver/heroin.json": {
+      "type": "alchemistry:dissolver",
+      "group": "alchemistry:dissolver",
+      "input": {
+        "item": "alchemicaldrugs:heroin"
+      },
+      "output": {
+        "rolls": 1,
+        "weighted": false,
+        "groups": [
+          {
+            "probability": 100.0,
+            "results": [
+              {
+                "item": "chemlib:carbon",
+                "count": 21
+              },
+              {
+                "item": "chemlib:hydrogen",
+                "count": 23
+              },
+              {
+                "item": "chemlib:nitrogen",
+                "count": 1
+              },
+              {
+                "item": "chemlib:oxygen",
+                "count": 5
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "data/alchemistry/recipes/dissolver/psilocybin.json": {
+      "type": "alchemistry:dissolver",
+      "group": "alchemistry:dissolver",
+      "input": {
+        "item": "alchemicaldrugs:psilocybin"
+      },
+      "output": {
+        "rolls": 1,
+        "weighted": false,
+        "groups": [
+          {
+            "probability": 100.0,
+            "results": [
+              {
+                "item": "chemlib:carbon",
+                "count": 12
+              },
+              {
+                "item": "chemlib:hydrogen",
+                "count": 17
+              },
+              {
+                "item": "alchemicaldrugs:dinitrogen_tetroxide",
+                "count": 1
+              },
+              {
+                "item": "chemlib:phosphorus",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "data/alchemistry/recipes/dissolver/penicillin.json": {
+      "type": "alchemistry:dissolver",
+      "group": "alchemistry:dissolver",
+      "input": {
+        "item": "alchemicaldrugs:penicillin"
+      },
+      "output": {
+        "rolls": 1,
+        "weighted": false,
+        "groups": [
+          {
+            "probability": 100.0,
+            "results": [
+              {
+                "item": "chemlib:carbon",
+                "count": 16
+              },
+              {
+                "item": "chemlib:hydrogen",
+                "count": 18
+              },
+              {
+                "item": "alchemicaldrugs:dinitrogen_tetroxide",
+                "count": 1
+              },
+              {
+                "item": "chemlib:sulfur",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "data/alchemistry/recipes/dissolver/dinitrogen_tetroxide.json": {
+      "type": "alchemistry:dissolver",
+      "group": "alchemistry:dissolver",
+      "input": {
+        "item": "alchemicaldrugs:dinitrogen_tetroxide"
+      },
+      "output": {
+        "rolls": 1,
+        "weighted": false,
+        "groups": [
+          {
+            "probability": 100.0,
+            "results": [
+              {
+                "item": "chemlib:nitrogen",
+                "count": 2
+              },
+              {
+                "item": "chemlib:oxygen",
+                "count": 4
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "data/alchemistry/recipes/dissolver/hydrocodone.json": {
+      "type": "alchemistry:dissolver",
+      "group": "alchemistry:dissolver",
+      "input": {
+        "item": "alchemicaldrugs:hydrocodone"
+      },
+      "output": {
+        "rolls": 1,
+        "weighted": false,
+        "groups": [
+          {
+            "probability": 100.0,
+            "results": [
+              {
+                "item": "chemlib:carbon",
+                "count": 18
+              },
+              {
+                "item": "chemlib:hydrogen",
+                "count": 21
+              },
+              {
+                "item": "chemlib:nitrogen",
+                "count": 1
+              },
+              {
+                "item": "chemlib:oxygen",
+                "count": 3
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "data/alchemistry/recipes/dissolver/cocaine.json": {
+      "type": "alchemistry:dissolver",
+      "group": "alchemistry:dissolver",
+      "input": {
+        "item": "alchemicaldrugs:cocaine"
+      },
+      "output": {
+        "rolls": 1,
+        "weighted": false,
+        "groups": [
+          {
+            "probability": 100.0,
+            "results": [
+              {
+                "item": "chemlib:carbon",
+                "count": 17
+              },
+              {
+                "item": "chemlib:hydrogen",
+                "count": 21
+              },
+              {
+                "item": "chemlib:nitrogen",
+                "count": 1
+              },
+              {
+                "item": "chemlib:oxygen",
+                "count": 4
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "data/alchemistry/recipes/dissolver/methamphetamine.json": {
+      "type": "alchemistry:dissolver",
+      "group": "alchemistry:dissolver",
+      "input": {
+        "item": "alchemicaldrugs:methamphetamine"
+      },
+      "output": {
+        "rolls": 1,
+        "weighted": false,
+        "groups": [
+          {
+            "probability": 100.0,
+            "results": [
+              {
+                "item": "chemlib:carbon",
+                "count": 10
+              },
+              {
+                "item": "chemlib:hydrogen",
+                "count": 15
+              },
+              {
+                "item": "chemlib:nitrogen",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

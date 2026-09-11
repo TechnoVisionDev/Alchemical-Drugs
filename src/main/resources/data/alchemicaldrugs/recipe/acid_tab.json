@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "alchemicaldrugs:lysergic_acid_diethylamide",
+    "minecraft:paper",
+    "#c:dyes"
+  ],
+  "result": {
+    "count": 4,
+    "id": "alchemicaldrugs:acid_tab"
+  }
+}
